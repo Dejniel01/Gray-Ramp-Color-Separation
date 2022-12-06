@@ -1,10 +1,6 @@
 ﻿using CommonClassLib;
 using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Text;
-using BezierModulePresentationUnit;
-using System.Linq;
 using BezierModulePresentationUnit.Interfaces;
 using FastBitmapLib;
 

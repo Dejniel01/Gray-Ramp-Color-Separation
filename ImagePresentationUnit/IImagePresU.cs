@@ -1,5 +1,4 @@
 ﻿using CommonClassLib;
-using System;
 
 namespace ImagePresentationUnit
 {

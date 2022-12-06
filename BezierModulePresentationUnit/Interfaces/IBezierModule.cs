@@ -1,6 +1,4 @@
 ﻿using CommonClassLib;
-using System;
-using System.Drawing;
 
 namespace BezierModulePresentationUnit.Interfaces
 {

@@ -251,6 +251,7 @@ namespace WinFormsApp
             // BWButton
             // 
             this.BWButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BWButton.Enabled = false;
             this.BWButton.Location = new System.Drawing.Point(272, 8);
             this.BWButton.Margin = new System.Windows.Forms.Padding(8);
             this.BWButton.Name = "BWButton";

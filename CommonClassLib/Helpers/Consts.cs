@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace CommonClassLib.Helpers
+﻿namespace CommonClassLib.Helpers
 {
     /// <summary>
     /// Const used across application

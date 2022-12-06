@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CommonClassLib.Helpers
 {
-	public static class Utils
+    public static class Utils
 	{
 		/// <summary>
 		/// Rounds float to closes integer

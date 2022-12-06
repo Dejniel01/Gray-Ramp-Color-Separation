@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace BezierModulePresentationUnit.Interfaces
+﻿namespace BezierModulePresentationUnit.Interfaces
 {
     /// <summary>
     /// Interface for canvas containing movable objects

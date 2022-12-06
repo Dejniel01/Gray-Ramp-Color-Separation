@@ -1,10 +1,6 @@
 ﻿using BezierModulePresentationUnit.Interfaces;
 using CommonClassLib.Helpers;
-using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Text;
-using System.Text.Json.Serialization;
 
 namespace BezierModulePresentationUnit.Classes
 {
