@@ -42,8 +42,9 @@ namespace WinFormsApp
             this.ChangePictureButton = new System.Windows.Forms.Button();
             this.SaveButton = new System.Windows.Forms.Button();
             this.LoadButton = new System.Windows.Forms.Button();
-            this.BWButton = new System.Windows.Forms.Button();
             this.ShowAllButton = new System.Windows.Forms.Button();
+            this.GenerateButton = new System.Windows.Forms.Button();
+            this.SaturationSlider = new System.Windows.Forms.TrackBar();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.AllCheckbox = new System.Windows.Forms.CheckBox();
             this.BlackButton = new System.Windows.Forms.RadioButton();
@@ -61,6 +62,7 @@ namespace WinFormsApp
             ((System.ComponentModel.ISupportInitialize)(this.BezierCanvas)).BeginInit();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SaturationSlider)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ImageCanvas)).BeginInit();
@@ -139,8 +141,9 @@ namespace WinFormsApp
             this.tableLayoutPanel5.Controls.Add(this.ChangePictureButton, 1, 1);
             this.tableLayoutPanel5.Controls.Add(this.SaveButton, 1, 2);
             this.tableLayoutPanel5.Controls.Add(this.LoadButton, 1, 3);
-            this.tableLayoutPanel5.Controls.Add(this.BWButton, 2, 0);
             this.tableLayoutPanel5.Controls.Add(this.ShowAllButton, 2, 2);
+            this.tableLayoutPanel5.Controls.Add(this.GenerateButton, 2, 0);
+            this.tableLayoutPanel5.Controls.Add(this.SaturationSlider, 2, 1);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(137, 3);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
@@ -248,19 +251,6 @@ namespace WinFormsApp
             this.LoadButton.UseVisualStyleBackColor = true;
             this.LoadButton.Click += new System.EventHandler(this.LoadButton_Click);
             // 
-            // BWButton
-            // 
-            this.BWButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BWButton.Enabled = false;
-            this.BWButton.Location = new System.Drawing.Point(272, 8);
-            this.BWButton.Margin = new System.Windows.Forms.Padding(8);
-            this.BWButton.Name = "BWButton";
-            this.tableLayoutPanel5.SetRowSpan(this.BWButton, 2);
-            this.BWButton.Size = new System.Drawing.Size(118, 78);
-            this.BWButton.TabIndex = 8;
-            this.BWButton.Text = "Black and white";
-            this.BWButton.UseVisualStyleBackColor = true;
-            // 
             // ShowAllButton
             // 
             this.ShowAllButton.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -273,6 +263,30 @@ namespace WinFormsApp
             this.ShowAllButton.Text = "Show all pictures";
             this.ShowAllButton.UseVisualStyleBackColor = true;
             this.ShowAllButton.Click += new System.EventHandler(this.ShowAllButton_Click);
+            // 
+            // GenerateButton
+            // 
+            this.GenerateButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.GenerateButton.Location = new System.Drawing.Point(272, 8);
+            this.GenerateButton.Margin = new System.Windows.Forms.Padding(8);
+            this.GenerateButton.Name = "GenerateButton";
+            this.GenerateButton.Size = new System.Drawing.Size(118, 31);
+            this.GenerateButton.TabIndex = 10;
+            this.GenerateButton.Text = "Generate pic";
+            this.GenerateButton.UseVisualStyleBackColor = true;
+            this.GenerateButton.Click += new System.EventHandler(this.GenerateButton_Click);
+            // 
+            // SaturationSlider
+            // 
+            this.SaturationSlider.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SaturationSlider.Location = new System.Drawing.Point(267, 50);
+            this.SaturationSlider.Maximum = 100;
+            this.SaturationSlider.Name = "SaturationSlider";
+            this.SaturationSlider.Size = new System.Drawing.Size(128, 41);
+            this.SaturationSlider.TabIndex = 11;
+            this.SaturationSlider.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.SaturationSlider.Value = 50;
+            this.SaturationSlider.MouseUp += new System.Windows.Forms.MouseEventHandler(this.SaturationSlider_MouseUp);
             // 
             // groupBox1
             // 
@@ -421,6 +435,8 @@ namespace WinFormsApp
             ((System.ComponentModel.ISupportInitialize)(this.BezierCanvas)).EndInit();
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
+            this.tableLayoutPanel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SaturationSlider)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
@@ -454,11 +470,12 @@ namespace WinFormsApp
         private System.Windows.Forms.Button ChangePictureButton;
         private System.Windows.Forms.Button SaveButton;
         private System.Windows.Forms.Button LoadButton;
-        private System.Windows.Forms.Button BWButton;
         private System.Windows.Forms.Button ShowAllButton;
         private System.Windows.Forms.OpenFileDialog ChangePicDialog;
         private System.Windows.Forms.SaveFileDialog SaveCurvesDialog;
         private System.Windows.Forms.OpenFileDialog LoadCurvesDialog;
+        private System.Windows.Forms.Button GenerateButton;
+        private System.Windows.Forms.TrackBar SaturationSlider;
     }
 }
 
